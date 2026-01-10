@@ -1,0 +1,33 @@
+{
+    "reportConfig": {
+        "reportId": "f6bfd646-b718-44dc-a378-b73e6b528204",
+        "embedUrl": "https://app.powerbi.com/reportEmbed?reportId=f6bfd646-b718-44dc-a378-b73e6b528204",
+        "settings": {
+            "filterPaneEnabled": false,
+            "navContentPaneEnabled": true
+        }
+    },
+    "datasets": [
+        {
+            "id": "cfafbeb1-8037-4d0c-896e-a46fb27ff229",
+            "name": "OlaCancellationMetrics"
+        }
+    ],
+    "visuals": [
+        {
+            "title": "Revenue by Month",
+            "type": "columnChart",
+            "dataPoints": [
+                35000,
+                42000,
+                38000,
+                45000
+            ]
+        },
+        {
+            "title": "Cancellation Rate",
+            "type": "card",
+            "value": "28.08%"
+        }
+    ]
+}

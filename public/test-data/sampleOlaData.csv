@@ -1,0 +1,6 @@
+"TripID","Date","Status","Revenue","DriverID","CancellationReason"
+"OLA1001","2024-01-15","Completed",350,"D005",""
+"OLA1002","2024-01-15","Cancelled",0,"D012","Driver Denied Duty"
+"OLA1003","2024-01-15","Completed",420,"D008",""
+"OLA1004","2024-01-16","Cancelled",0,"D005","Customer No Show"
+"OLA1005","2024-01-16","Completed",280,"D022",""
