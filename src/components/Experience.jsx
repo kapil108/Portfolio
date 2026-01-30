@@ -4,16 +4,28 @@ import { motion } from 'framer-motion';
 const Experience = () => {
     const experiences = [
         {
-            company: "Data Science Intern",
-            period: "June 2025 - August 2025",
-            role: "Machine Learning & Analytics",
-            description: "Worked on optimizing data pipelines and building predictive models for business intelligence.",
+            company: "STHEERA",
+            period: "December 2024 – March 2025",
+            role: "Search Engine Optimization (SEO)",
+            description: "Implemented data-driven SEO strategies to boost organic growth and search visibility.",
             achievements: [
-                "Automated data extraction from multiple sources using Python, reducing manual effort by 40%.",
-                "Developed a customer churn prediction model with 85% accuracy using Random Forest.",
-                "Designed interactive Power BI dashboards for executive-level performance tracking."
+                "Implemented targeted SEO strategies, including keyword research and optimization, resulting in a 35% increase in organic traffic.",
+                "Achieved a 20% improvement in search engine rankings for targeted keywords within three months.",
+                "Collaborated with content teams to boost engagement by 25% and CTR by 15% through competitor analysis."
             ],
-            tech: ["Python", "SQL", "Scikit-Learn", "Power BI"]
+            tech: ["SEO", "Google Search Console", "Keyword Research", "Competitor Analysis"]
+        },
+        {
+            company: "Today's Nifty",
+            period: "July 2024 – November 2024",
+            role: "Data Analyst",
+            description: "Managed large-scale datasets to drive strategic decision-making and performance tracking.",
+            achievements: [
+                "Executed SQL queries to extract, analyze, and manage 100K+ rows of data for SEO and performance tracking.",
+                "Managed and optimized datasets in Excel, improving data accuracy and efficiency by 30%.",
+                "Enabled better strategic decision-making through data-driven insights and reporting."
+            ],
+            tech: ["SQL", "Excel", "Data Analytics", "Performance Tracking"]
         }
     ];
 
@@ -33,7 +45,7 @@ const Experience = () => {
 
                             <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                                 <div>
-                                    <h3 className="text-xl font-bold text-white">{exp.company}</h3>
+                                    <h3 className="text-xl font-bold text-white uppercase tracking-tight">{exp.company}</h3>
                                     <p className="text-[#0ea5ff] font-medium">{exp.role}</p>
                                 </div>
                                 <span className="text-sm text-gray-500 font-mono mt-1 md:mt-0">{exp.period}</span>
