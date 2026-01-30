@@ -4,19 +4,19 @@ const Projects = () => {
     const projects = [
         {
             id: 'pharma',
-            title: "Intelligent Pharma Context Engine",
+            title: "Intelligent Pharma-Context Engine",
             category: "Pharma AI",
-            tech: ["Python", "FastAPI", "Streamlit", "LLM", "RAG"],
+            tech: ["Python", "YOLOv8", "OpenCV", "EasyOCR", "RxNorm", "Streamlit"],
             stats: [
-                "Real-time Context",
-                "Pharma-Specific",
-                "Scalable Inference"
+                "95%+ OCR Accuracy",
+                "Real-time Validation",
+                "RxNorm Integrated"
             ],
-            description: "Context-aware AI engine tailored for pharmaceutical intelligence and data retrieval.",
+            description: "End-to-end computer vision pipeline for pharmaceutical package data extraction and drug verification.",
             details: {
-                problem: "Pharmaceutical data is fragmented and lacks real-time contextual intelligence.",
-                approach: "Developed a pharma-specific RAG engine using FastAPI and Streamlit for seamless inference.",
-                impact: "Enhanced data-driven decision making with precise contextual insights."
+                problem: "Manual entry of pharmaceutical data is error-prone and slow, especially with noisy image sources.",
+                approach: "Designed a CV pipeline using YOLOv8 for detection and EasyOCR with custom OpenCV preprocessing (Dewarping, CLAHE).",
+                impact: "Achieved high accuracy on noisy package images and integrated RxNorm/OpenFDA to minimize CER using Levenshtein distance."
             },
             links: { repo: "https://github.com/kapil108/Intelligent-Pharma-Context-Engine", demo: "https://intelligent-pharma-context-engine-zz.streamlit.app/" },
             featured: false
