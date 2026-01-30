@@ -26,19 +26,21 @@ const About = () => {
 
                     <div className="pt-8">
                         <h3 className="text-xl font-bold text-white mb-6">Why Hire Me?</h3>
-                        <div className="space-y-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
                             {[
-                                "Production-Ready ML: I don't just build models; I deploy scalable APIs.",
-                                "Full-Stack Data: From raw SQL queries to interactive Power BI dashboards.",
-                                "Immediate Impact: Familiar with enterprise tools (Git, Docker, CI/CD).",
-                                "Business-First Mindset: I optimize for revenue and efficiency, not just accuracy.",
-                                "Problem Solver: Proven track record in hackathons and competitive programming."
-                            ].map((point, index) => (
-                                <div key={index} className="flex items-start gap-3">
-                                    <div className="mt-1 text-[#16a34a] flex-shrink-0">
+                                { title: "Production ML", text: "I build and deploy scalable RAG and inference pipelines." },
+                                { title: "Full-Stack Data", text: "End-to-end expertise from SQL queries to Power BI dashboards." },
+                                { title: "Business Impact", text: "I focus on optimization, revenue, and actionable insights." },
+                                { title: "Problem Solver", text: "Strong foundation in data structures and competitive coding." }
+                            ].map((item, index) => (
+                                <div key={index} className="flex items-start gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors group">
+                                    <div className="mt-1 text-[#16a34a] flex-shrink-0 group-hover:scale-110 transition-transform">
                                         <svg className="w-5 h-5 bg-[#16a34a]/10 rounded-full p-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg>
                                     </div>
-                                    <p className="text-gray-300 text-base">{point}</p>
+                                    <div>
+                                        <p className="text-white text-sm font-bold mb-1">{item.title}</p>
+                                        <p className="text-gray-400 text-xs leading-relaxed">{item.text}</p>
+                                    </div>
                                 </div>
                             ))}
                         </div>

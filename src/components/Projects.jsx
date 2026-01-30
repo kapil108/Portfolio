@@ -1,8 +1,28 @@
-import React from 'react';
+import OlaChart from './OlaChart';
 
 const Projects = () => {
     const projects = [
         {
+            id: 'pharma',
+            title: "Intelligent Pharma Context Engine",
+            category: "Pharma AI",
+            tech: ["Python", "FastAPI", "Streamlit", "LLM", "RAG"],
+            stats: [
+                "Real-time Context",
+                "Pharma-Specific",
+                "Scalable Inference"
+            ],
+            description: "Context-aware AI engine tailored for pharmaceutical intelligence and data retrieval.",
+            details: {
+                problem: "Pharmaceutical data is fragmented and lacks real-time contextual intelligence.",
+                approach: "Developed a pharma-specific RAG engine using FastAPI and Streamlit for seamless inference.",
+                impact: "Enhanced data-driven decision making with precise contextual insights."
+            },
+            links: { repo: "https://github.com/kapil108/Intelligent-Pharma-Context-Engine", demo: "https://intelligent-pharma-context-engine-zz.streamlit.app/" },
+            featured: false
+        },
+        {
+            id: 'rag',
             title: "Multimodal AI Stress Platform",
             category: "Flagship Project",
             tech: ["FastAPI", "Streamlit", "RAG (Gemini+FAISS)", "Random Forest", "Railway"],
@@ -21,6 +41,7 @@ const Projects = () => {
             featured: true
         },
         {
+            id: 'ola',
             title: "Ola Ride Analytics Dashboard",
             category: "Data Analytics",
             tech: ["SQL", "Excel", "Power BI"],
@@ -36,9 +57,10 @@ const Projects = () => {
                 impact: "Identified top cancellation drivers and produced an executive dashboard used for stakeholder decisions."
             },
             links: { repo: "https://github.com/kapil108/Ola-Ride-Analytics-Dashboard" },
-            featured: false
+            featured: true
         },
         {
+            id: 'cricket',
             title: "Cricket Data Analytics Dashboard",
             category: "Sports Analytics",
             tech: ["Python", "Power BI", "DAX"],
@@ -57,6 +79,7 @@ const Projects = () => {
             featured: false
         },
         {
+            id: 'robil',
             title: "Robil Backend",
             category: "Backend Engineering",
             tech: ["FastAPI", "PostgreSQL", "SQLAlchemy", "JWT"],
@@ -97,12 +120,12 @@ const Projects = () => {
                                     </span>
                                     <div className="flex gap-3">
                                         {project.links.repo && (
-                                            <a href={project.links.repo} className="text-gray-400 hover:text-white transition-colors" aria-label="View Repository">
+                                            <a href={project.links.repo} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="View Repository">
                                                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>
                                             </a>
                                         )}
                                         {project.links.demo && (
-                                            <a href={project.links.demo} className="text-gray-400 hover:text-white transition-colors" aria-label="View Live Demo">
+                                            <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors" aria-label="View Live Demo">
                                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                                             </a>
                                         )}
@@ -136,15 +159,54 @@ const Projects = () => {
                                 </div>
                             </div>
 
-                            {project.featured && (
-                                <div className="hidden md:block bg-gray-800/50 p-8 border-l border-gray-800 flex items-center justify-center relative overflow-hidden">
-                                    {/* Placeholder for Architecture Diagram */}
-                                    <div className="absolute inset-0 flex items-center justify-center text-gray-700 opacity-20 text-9xl font-bold select-none pointer-events-none">
-                                        RAG
+                            {project.featured && project.id === 'rag' && (
+                                <div className="hidden md:flex bg-[#1a1d21] p-8 border-l border-gray-800 items-center justify-center relative overflow-hidden">
+                                    {/* Visual RAG Architecture Diagram */}
+                                    <div className="relative w-full h-full flex flex-col items-center justify-center gap-6">
+                                        <div className="flex items-center gap-4 z-10 w-full justify-around">
+                                            <div className="flex flex-col items-center gap-2">
+                                                <div className="w-12 h-12 rounded-lg bg-gray-800 border border-gray-700 flex items-center justify-center text-[#0ea5ff]">
+                                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                                                </div>
+                                                <span className="text-[10px] uppercase font-bold tracking-tighter text-gray-500">User</span>
+                                            </div>
+
+                                            <div className="w-8 h-[2px] bg-gradient-to-r from-[#0ea5ff] to-[#16a34a] relative">
+                                                <div className="absolute top-1/2 left-0 w-1 h-1 bg-[#0ea5ff] rounded-full animate-ping"></div>
+                                            </div>
+
+                                            <div className="flex flex-col items-center gap-2">
+                                                <div className="w-16 h-16 rounded-xl bg-[#0ea5ff]/10 border border-[#0ea5ff]/30 flex items-center justify-center text-[#0ea5ff] shadow-[0_0_15px_-5px_#0ea5ff]">
+                                                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                                </div>
+                                                <span className="text-[10px] uppercase font-bold tracking-tighter text-[#0ea5ff]">Gemini Pro</span>
+                                            </div>
+
+                                            <div className="w-8 h-[2px] bg-gradient-to-r from-[#16a34a] to-[#0ea5ff]"></div>
+
+                                            <div className="flex flex-col items-center gap-2">
+                                                <div className="w-12 h-12 rounded-lg bg-gray-800 border border-gray-700 flex items-center justify-center text-[#16a34a]">
+                                                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+                                                </div>
+                                                <span className="text-[10px] uppercase font-bold tracking-tighter text-gray-500">FAISS DB</span>
+                                            </div>
+                                        </div>
+
+                                        <div className="absolute inset-0 flex items-center justify-center text-gray-800/10 text-9xl font-black select-none pointer-events-none uppercase">
+                                            RAG
+                                        </div>
+
+                                        <div className="px-4 py-2 rounded bg-black/50 border border-gray-800 text-[11px] text-gray-400 font-mono">
+                                            query -&gt; vector -&gt; retrieve -&gt; augment
+                                        </div>
                                     </div>
-                                    <div className="text-center z-10">
-                                        <svg className="w-24 h-24 mx-auto text-[#0ea5ff] mb-4 opacity-80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
-                                        <p className="text-sm text-gray-500">Architecture Diagram Placeholder</p>
+                                </div>
+                            )}
+
+                            {project.featured && project.id === 'ola' && (
+                                <div className="hidden md:flex bg-[#1a1d21] p-8 border-l border-gray-800 items-center justify-center">
+                                    <div className="w-full max-w-sm">
+                                        <OlaChart />
                                     </div>
                                 </div>
                             )}
