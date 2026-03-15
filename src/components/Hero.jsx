@@ -97,7 +97,7 @@ const Hero = ({ variant = 'A' }) => {
                         {primaryCtaText}
                         <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                     </a>
-                    <a href="https://drive.google.com/file/d/1hJAe6vFnd1R5QYY4mddsIINbXhG3w9BA/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 rounded-lg bg-[#1a1d21] text-gray-300 border border-gray-800 hover:border-gray-600 hover:text-white transition-all font-medium flex items-center justify-center gap-2">
+                    <a href="https://drive.google.com/file/d/1UQwZ77fRrA0sLHinwR0eFlOfdx1TDiDc/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="px-8 py-3.5 rounded-lg bg-[#1a1d21] text-gray-300 border border-gray-800 hover:border-gray-600 hover:text-white transition-all font-medium flex items-center justify-center gap-2">
                         View Resume
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                     </a>

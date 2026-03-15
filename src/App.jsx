@@ -25,7 +25,7 @@ function App() {
             <a href="#" className="hover:text-primary transition-colors">Home</a>
             <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
             <a href="https://portfolio-woad-seven-27.vercel.app" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors text-[#0ea5ff]">Live Portfolio</a>
-            <a href="https://drive.google.com/file/d/1hJAe6vFnd1R5QYY4mddsIINbXhG3w9BA/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Resume</a>
+            <a href="https://drive.google.com/file/d/1UQwZ77fRrA0sLHinwR0eFlOfdx1TDiDc/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Resume</a>
           </div>
         </div>
       </footer>
