@@ -4,6 +4,18 @@ import { motion } from 'framer-motion';
 const Experience = () => {
     const experiences = [
         {
+            company: "Hike Pvt. Ltd.",
+            period: "July 2025 – September 2025",
+            role: "ML Intern",
+            description: "Engineered AI-driven interactive systems and multi-agent orchestrators using Model Context Protocol (MCP) to streamline product development and query handling.",
+            achievements: [
+                "Built an <strong class='text-[#0ea5ff]'>AI-driven system</strong> that auto-generated <strong class='text-white'>15+ interactive games</strong> from PRDs/prototypes, reducing product ideation time by <strong class='text-white'>~40%</strong>.",
+                "Integrated <strong class='text-[#0ea5ff]'>Model Context Protocol (MCP)</strong> with a custom agent to enable reliable orchestration and scalability.",
+                "Contributed in <strong class='text-[#0ea5ff]'>ProductCopilot Agent</strong> as an orchestrator that intelligently routes queries to specialized agents (BigQuery, RAG, Tableau), improving query handling efficiency by <strong class='text-white'>~30%</strong> and reducing PM workflow time."
+            ],
+            tech: ["AI", "Model Context Protocol", "LLMs", "RAG", "BigQuery", "Agent Orchestration"]
+        },
+        {
             company: "STHEERA",
             period: "December 2024 – March 2025",
             role: "Search Engine Optimization (SEO)",
@@ -59,7 +71,7 @@ const Experience = () => {
                                         <svg className="w-4 h-4 text-[#16a34a] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                         </svg>
-                                        <span>{item}</span>
+                                        <span dangerouslySetInnerHTML={{ __html: item }}></span>
                                     </li>
                                 ))}
                             </ul>
